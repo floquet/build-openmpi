@@ -1,3 +1,6 @@
+.DS*
+.nfs*
+
 # Prerequisites
 *.d
 
