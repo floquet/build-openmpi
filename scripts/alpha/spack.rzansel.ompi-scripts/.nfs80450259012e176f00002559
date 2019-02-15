@@ -1,0 +1,4 @@
+Thu Feb 14 11:30:00 PST 2019
+spack  install  openmpi @ 2.1.6 % pgi@17.10 
+
+[82]+  Stopped                 spack install openmpi @ 2.1.6 % pgi@17.10
