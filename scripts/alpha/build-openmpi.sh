@@ -9,6 +9,11 @@ printf '%s\n' "$(date) ${BASH_SOURCE[0]}" # who I am
 export ymd=$(date +%Y-%m-%d-%H-%M)
 mkdir -p ${scripts_dir}/yaml
 
+# activate spack
+cd ${tpl_dir}
+. share/spack/setup-env.sh
+spack clean -a
+
 echo ""
 echo "\${repo_dir}    = ${repo_dir}"
 echo "\${spack_dir}   = ${spack_dir}"
@@ -16,11 +21,6 @@ echo "\${tpl_dir}     = ${tpl_dir}"
 echo "\${scripts_dir} = ${scripts_dir}"
 echo "\${SPACK_ROOT}  = ${SPACK_ROOT}"
 echo ""
-
-# activate spack
-cd ${tpl_dir}
-. share/spack/setup-env.sh
-spack clean -a
 
 for v in ${tpl_versions}; do
     for c in ${myCompilers}; do
