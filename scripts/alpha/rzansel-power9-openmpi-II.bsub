@@ -1,0 +1,49 @@
+#!/bin/bash -l
+
+# # rzansel login
+#BSUB -nnodes 1
+#BSUB -q pbatch
+
+printf '%s\n' "$(date) ${BASH_SOURCE[0]}" # who I am
+
+export tpl="openmpi"
+export tpl_versions="3.1.3 3.0.3 2.1.6"
+
+export myCompilers="gcc@7.3.1  gcc@7.2.1  gcc@4.9.3  gcc@4.8.5"
+export myCompilers="${myCompilers} clang@8.0.0  clang@6.0.0"
+# export myCompilers="${myCompilers} pgi@18.10  pgi@18.7  pgi@17.10"
+export myCompilers="${myCompilers} xl@16.1  xl_r@16.0.5"
+
+export spack_flag_fore="" #-d"  # debug
+export  spack_flag_aft="" #--keep-prefix --verbose --test=all --clean"   # verbose
+export spack_overrides=""
+
+export    repo_dir="/usr/workspace/wsrzc/topa1/repos/Github/build-openmpi/scripts/alpha"
+export   spack_dir="spack.rzansel.ompi"
+export     tpl_dir="/usr/workspace/wsrzc/topa1/spack-home/${spack_dir}"
+export scripts_dir="${repo_dir}/${spack_dir}-scripts"
+
+source ${repo_dir}/build-openmpi.sh
+
+# topa1@rzansel61:spack.rzansel.ompi $ date
+# Wed Feb 13 12:33:40 PST 2019
+
+# topa1@rzansel61:spack.rzansel.ompi $ pwd
+# /usr/workspace/wsrzc/topa1/spack-home/spack.rzansel.ompi
+
+# topa1@rzansel61:spack.rzansel.ompi $ spack compilers
+# ==> Available compilers
+# -- clang rhel7-ppc64le ------------------------------------------
+# clang@8.0.0  clang@6.0.0
+#
+# -- gcc rhel7-ppc64le --------------------------------------------
+# gcc@7.3.1  gcc@7.2.1  gcc@4.9.3  gcc@4.8.5
+#
+# -- pgi rhel7-ppc64le --------------------------------------------
+# pgi@18.10  pgi@18.7  pgi@17.10
+#
+# -- xl rhel7-ppc64le ---------------------------------------------
+# xl@16.1
+#
+# -- xl_r rhel7-ppc64le -------------------------------------------
+# xl_r@16.0.5
