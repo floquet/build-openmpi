@@ -1,4 +1,0 @@
-Thu Feb 14 11:30:00 PST 2019
-spack  install  openmpi @ 2.1.6 % xl_r@16.0.5 
-
-[86]+  Stopped                 spack install openmpi @ 2.1.6 % xl_r@16.0.5

@@ -1,4 +1,0 @@
-Thu Feb 14 11:29:59 PST 2019
-spack  install  openmpi @ 2.1.6 % gcc@4.8.5 
-
-[72]+  Stopped                 spack install openmpi @ 2.1.6 % gcc@4.8.5

@@ -1,4 +1,0 @@
-Thu Feb 14 11:29:57 PST 2019
-spack  install  openmpi @ 3.0.3 % clang@8.0.0 
-
-[52]+  Stopped                 spack install openmpi @ 3.0.3 % clang@8.0.0
